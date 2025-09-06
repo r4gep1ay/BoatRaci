@@ -102,4 +102,4 @@ slot: 3
 | `/bra createtrack <track name>`| Create new track | op |
 | `/bra createracer <track>` | Create racer starting position | op |
 
-For English, see [README_EN.md](README_EN.md)
+For Russian, see [README.md](README.md)
