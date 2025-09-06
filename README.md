@@ -102,3 +102,5 @@ effects:
 | `/bra createtrack <название трека>`| Создать новый трек                |  op   |
 | `/bra createracer <трек>`          | Создать стартовую позицию гонщика |  op   |
 
+For English, see [README_EN.md](README_EN.md)
+
