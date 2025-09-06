@@ -31,56 +31,56 @@ Download the `.jar` file of the plugin and place it in the `plugins` folder of y
 language: en_EN
 
 queue:
-min-players: 2
-max-players: 16
+  min-players: 2
+  max-players: 16
 
 race:
-start-time: 5
-time-to-race: 10
-checkpoint-cooldown: 3
-match-time: 600
+  start-time: 5
+  time-to-race: 10
+  checkpoint-cooldown: 3
+  match-time: 600
 
 start:
-world: BOATRACI
-x: 0.5
-y: 64.0
-z: 0.5
-yaw: 0.0
-pitch: 0.0
+  world: BOATRACI
+  x: 0.5
+  y: 64.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
 
 items:
-race-checkpoint:
-name: §aTeleport to the last checkpoint
-slot: 0
-item: STICK
-glow: true
-race-exit:
-name: §cLeave the race
-slot: 8
-item: BARRIER
-glow: false
-race-effects:
-name: §bEffects
-slot: 4
-item: DIAMOND
-glow: true
+  race-checkpoint:
+    name: §aTeleport to the last checkpoint
+    slot: 0
+    item: STICK
+    glow: true
+  race-exit:
+    name: §cLeave the race
+    slot: 8
+    item: BARRIER
+    glow: false
+  race-effects:
+    name: §bEffects
+    slot: 4
+    item: DIAMOND
+    glow: true
 
 effects:
-FIRE:
-particle: FLAME
-name: §6Fire under the boat
-material: BLAZE_POWDER
-slot: 1
-GLOW:
-particle: END_ROD
-name: §dGlow
-material: AMETHYST_SHARD
-slot: 2
-ANGRY:
-particle: VILLAGER_ANGRY
-name: §cRage
-material: EMERALD
-slot: 3
+  FIRE:
+    particle: FLAME
+    name: §6Fire under the boat
+    material: BLAZE_POWDER
+    slot: 1
+  GLOW:
+    particle: END_ROD
+    name: §dGlow
+    material: AMETHYST_SHARD
+    slot: 2
+  ANGRY:
+    particle: VILLAGER_ANGRY
+    name: §cRage
+    material: EMERALD
+    slot: 3
 # ... other effects ...
 ```
 
