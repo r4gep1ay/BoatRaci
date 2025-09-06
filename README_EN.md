@@ -28,11 +28,11 @@ Download the `.jar` file of the plugin and place it in the `plugins` folder of y
 ### Main config (`config.yml`)
 
 ```yaml
-language: ru_RU
+language: en_EN
 
 queue:
-min-players: 1
-max-players: 4
+min-players: 2
+max-players: 16
 
 race:
 start-time: 5
@@ -42,10 +42,10 @@ match-time: 600
 
 start:
 world: BOATRACI
-x: 400.5
-y: -17.0
-z: 1091.5
-yaw: -130.0
+x: 0.5
+y: 64.0
+z: 0.5
+yaw: 0.0
 pitch: 0.0
 
 items:
