@@ -28,60 +28,161 @@ BoatRaci вдохновлён классическими гоночными ми
 ### Основной конфиг (`config.yml`)
 
 ```yaml
-language: ru_RU
+language: ru_RU # Язык
+
+license:
+  eula-agreed: false # Соглашение с правилами
+  license-key: "YOUR-LICENSE-KEY-HERE" # Ваш лицензионный ключ
 
 queue:
-  min-players: 2
-  max-players: 16
+  min-players: 2   # Минимальное количество игроков для старта
+  max-players: 16   # Максимальное количество игроков в гонке
 
 race:
-  start-time: 5
-  time-to-race: 10
-  checkpoint-cooldown: 3
-  match-time: 600
+  start-time: 5        # Время до начала старта
+  time-to-race: 10      # Время до начала гонки
+  checkpoint-cooldown: 3  # Перезарядка контрольной точки в секундах, от 0 до 60
+  match-time: 600          # Время матча (сек)
+  traffic-light: 2 # Через сколько секунд запускаем светофор? После start-time
 
+# Начальная точка
 start:
-  world: BOATRACI
+  world: "BOATRACI"
   x: 0.5
   y: 64.0
   z: 0.5
   yaw: 0.0
   pitch: 0.0
 
+# Предметы гонки
 items:
   race-checkpoint:
-    name: §aТелепорт к последней контрольной точке
+    name: "§aТелепорт к последней контрольной точке"
     slot: 0
-    item: STICK
+    item: "STICK"
     glow: true
   race-exit:
-    name: §cПокинуть гонку
+    name: "§cПокинуть гонку"
     slot: 8
-    item: BARRIER
+    item: "BARRIER"
     glow: false
   race-effects:
-    name: §bЭффекты
+    name: "§bЭффекты"
     slot: 4
-    item: DIAMOND
+    item: "DIAMOND"
     glow: true
 
-effects:
+# Здесь можно включать любые поддерживаемые частицы/эффекты
+# Полный список частиц: https://helpch.at/docs/1.21.1/org/bukkit/Particle.html
+effects: 
   FIRE:
-    particle: FLAME
-    name: §6Огонь под лодкой
-    material: BLAZE_POWDER
-    slot: 1
+    particle: "FLAME"             # Тип частицы
+    name: "§6Огненный след"    # Название эффекта в меню
+    material: "BLAZE_POWDER"      # Предмет для отображения в GUI
+    slot: 1                       # Слот в меню
   GLOW:
-    particle: END_ROD
-    name: §dСвечение
-    material: AMETHYST_SHARD
+    particle: "END_ROD"
+    name: "§fНебесное свечение"
+    material: "AMETHYST_SHARD"
     slot: 2
   ANGRY:
-    particle: VILLAGER_ANGRY
-    name: §cЯрость
-    material: EMERALD
+    particle: "VILLAGER_ANGRY"
+    name: "§cГроза дорог"
+    material: "EMERALD"
     slot: 3
-  # ... остальные эффекты ...
+  WATER_WAKE:
+    particle: "WATER_WAKE"
+    name: "§bБрызги моря"
+    material: "WATER_BUCKET"
+    slot: 4
+  CAMPFIRE:
+    particle: "CAMPFIRE_COSY_SMOKE"
+    name: "§6Дым костра"
+    material: "CAMPFIRE"
+    slot: 5
+  ENDERMAN:
+    particle: "SPELL_WITCH"
+    name: "§dФиолетовое сияние"
+    material: "ENDER_PEARL"
+    slot: 6
+  GLOW_INK:
+    particle: "GLOW_SQUID_INK"
+    name: "§aСияние глубин"
+    material: "GLOW_INK_SAC"
+    slot: 7
+  FIREWORK:
+    particle: "FIREWORK"
+    name: "§fИскры ночи"
+    material: "FIREWORK_ROCKET"
+    slot: 8
+  TRIAL_OMEN:
+    particle: "TRIAL_OMEN"
+    name: "§5Знак Смерти"
+    material: "OMINOUS_BOTTLE"
+    slot: 9
+  SQUID_INK:
+    particle: "SQUID_INK"
+    name: "§9Чернила кальмара"
+    material: "INK_SAC"
+    slot: 10
+  DRAGON_BREATH:
+    particle: "dragon_breath"
+    name: "§dДыхание дракона"
+    material: "dragon_breath"
+    slot: 11
+  SOUL:
+    particle: "SOUL"
+    name: "§5Мёртвые души"
+    material: "SOUL_SAND"
+    slot: 12
+  SOUL_FIRE_FLAME:
+    particle: "SOUL_FIRE_FLAME"
+    name: "§cПламя из душ"
+    material: "SOUL_CAMPFIRE"
+    slot: 13
+  PORTAL:
+    particle: "PORTAL"
+    name: "§cЭхо энда"
+    material: "end_portal_frame"
+    slot: 14
+  SNEEZE:
+    particle: "SNEEZE"
+    name: "§fСмрад"
+    material: "WARD_ARMOR_TRIM_SMITHING_TEMPLATE"
+    slot: 15
+
+database:
+  type: sqlite # sqlite / mysql
+  mysql:
+    host: localhost
+    port: 3306
+    database: boatraci
+    username: root
+    password: password
+
+# Здесь вы можете заблокировать взаимодействие с блоками, установив true
+# Также вы можете настроить светофор для гонки
+advanced:
+  world: "BOATRACI"
+  block-use: false
+  traffic_light:
+    enabled: false
+    red:
+      x: 0
+      y: 70
+      z: 0
+      block: red_wool
+    yellow:
+      x: 0
+      y: 69
+      z: 0
+      block: yellow_stained_glass
+    green:
+      x: 0
+      y: 68
+      z: 0
+      block: emerald_block
+    return_block: tinted_glass
 ```
 
 | Команда                | Описание                                 |  Права  |
