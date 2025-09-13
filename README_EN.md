@@ -202,5 +202,6 @@ advanced:
 | `/bra setfinishsound <track> <sound>`| Set victory sound | op |
 | `/bra createtrack <track name>`| Create new track | op |
 | `/bra createracer <track>` | Create racer starting position | op |
+| `/bra leaderboard <command> <track>`| Leaderboard management | op |
 
 For Russian, see [README.md](README.md)
