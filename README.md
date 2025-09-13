@@ -202,7 +202,7 @@ advanced:
 | `/bra setfinishsound <трек> <звук>`| Установить звук победы            |  op   |
 | `/bra createtrack <название трека>`| Создать новый трек                |  op   |
 | `/bra createracer <трек>`          | Создать стартовую позицию гонщика |  op   |
-| `/bra leaderboard <команда> <трек>`| Управление таблицей лидеров       |  op   |
+| `/bra leaderboard create/move/remove <трек>`| Управление таблицей лидеров       |  op   |
 
 For English, see [README_EN.md](README_EN.md)
 
