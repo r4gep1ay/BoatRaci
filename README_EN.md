@@ -23,6 +23,14 @@ Download the `.jar` file of the plugin and place it in the `plugins` folder of y
 
 Buy - https://boosty.to/boatraci/posts/8d80e6e7-9a5c-4ec7-968f-a441e023d8a3
 
+## Dependencies:
+1) Vault - optional, to issue rewards in game currency;
+2) PlaceholderAPI - optional, to output %placeholders%,
+- %boatraci_your_wins% - number of player wins,
+- %boatraci_your_games% - number of completed games,
+- %boatraci_your_rank% - place relative to the list of wins;
+3) DecentHolograms - optional, to use the /bra leaderboard command.
+
 ---
 
 ## ⚙ Configuration
