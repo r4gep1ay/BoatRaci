@@ -21,6 +21,8 @@ BoatRaci is inspired by classic Minecraft racing minigames, but with expanded fe
 
 Download the `.jar` file of the plugin and place it in the `plugins` folder of your Paper or Purpur server. After restarting the server, the necessary configs will be created.
 
+Buy - https://boosty.to/boatraci/posts/8d80e6e7-9a5c-4ec7-968f-a441e023d8a3
+
 ---
 
 ## ⚙ Configuration
